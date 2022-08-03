@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Instalación software inventario activos.</title>
+<meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="SnipeIT.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-3.6.0.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="util.min.js"></script>
+<script src="modal.min.js"></script>
+<script src="wwb17.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   var $Wizard1Panels = $('#Wizard1-panels');
+   function updateButtonsWizard1()
+   {
+      var active = $Wizard1Panels.tabs('option', 'active');
+      var count = $Wizard1Panels.find('.ui-tabs-panel').length-1;
+      var title = $($('#Wizard1 li')[active]).text();
+      $('#Wizard1-prev').prop('disabled', active == 0 ? true : false);
+      $('#Wizard1-next').prop('disabled', active == count ? true : false);
+      $('#Wizard1-finish').prop('disabled', active == count ? false : true);
+      $('#Wizard1 .modal-title').text(title);
+   }
+   $('#Wizard1').modal('show');
+   $('#Wizard1 .modal-dialog').draggable({handle: '.modal-header'});
+   $('#Wizard1-prev').click(function()
+   {
+      var active = $Wizard1Panels.tabs("option", "active");if (active > 0)active--;$Wizard1Panels.tabs("option", "active", active);updateButtonsWizard1();
+   });
+   $('#Wizard1-next').click(function()
+   {
+      var active = $Wizard1Panels.tabs("option", "active");var count = $Wizard1Panels.find('.ui-tabs-panel').length-1;if (active < count)active++;$Wizard1Panels.tabs("option", "active", active);updateButtonsWizard1();
+   });
+   $('#Wizard1-finish').click(function()
+   {
+      $('#Wizard1').modal('hide');
+   });
+   $("#Wizard1-panels").tabs(
+   {
+      show: false,
+      hide: false,
+      event: 'click',
+      active: 0,
+      collapsible: false
+   });
+   updateButtonsWizard1();
+});
+</script>
+</head>
+<body>
+<div id="wb_FlexContainer1">
+<div id="FlexContainer1">
+<input type="button" id="Button1" onclick="$('#Wizard1').modal('show');return false;" name="" value="Abrir tutorial" style="display:block;width:208px;height:36px;z-index:0;">
+</div>
+</div>
+<div id="Wizard1" class="modal" data-keyboard="false" role="dialog">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<div class="modal-title">Paso 1</div>
+</div>
+<div class="modal-body">
+<div id="Wizard1-panels" Inventario aaaa>
+<ul>
+<li><a href="#wizard1-panels-page-1"><span>Instalación software inventario activos.</span></a></li>
+<li><a href="#wizard1-panels-page-2"><span>Paso 1</span></a></li>
+<li><a href="#wizard1-panels-page-3"><span>Paso 2</span></a></li>
+<li><a href="#wizard1-panels-page-4"><span>Paso 3</span></a></li>
+<li><a href="#wizard1-panels-page-5"><span>Paso 4</span></a></li>
+<li><a href="#wizard1-panels-page-6"><span>Paso 5</span></a></li>
+<li><a href="#wizard1-panels-page-7"><span>Paso 6</span></a></li>
+<li><a href="#wizard1-panels-page-8"><span>Paso 7</span></a></li>
+<li><a href="#wizard1-panels-page-9"><span>Paso 8</span></a></li>
+<li><a href="#wizard1-panels-page-10"><span>¡Gracias!</span></a></li>
+</ul>
+<div id="wizard1-panels-page-1">
+<picture id="wb_Picture3" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:1">
+<img src="images/logo_powerapps.png" id="Picture3" alt="" width="525" height="70">
+</picture>
+<hr id="Line3" style="position:absolute;left:15px;top:87px;width:768px;z-index:2;">
+<div id="wb_Text3" style="position:absolute;left:15px;top:132px;width:768px;height:262px;z-index:3;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Bienvenido al tutorial de instalación del software de inventario de activos de Ilunion Contact Center BPO.<br><br>Desde el Dpto. de Tecnología estamos muy comprometidos con la seguridad y por ello necesitamos de tu ayuda para la instalación de un software que nos permitirá mantener tu equipo de teletrabajo mucho más seguro.<br><br>A continuación encontrarás los pasos que debes seguir para su instalación de una manera sencilla.<br><br>Para continuar pulsa en el botón &quot;Siguiente&quot;.</span></div>
+</div>
+<div id="wizard1-panels-page-2">
+<div id="wb_Text1" style="position:absolute;left:15px;top:132px;width:768px;height:48px;z-index:4;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Lo primero que debes hacer es decargar el software, para ello sólo tienes que hacer clic en el siguiente botón de descarga.</span></div>
+<hr id="Line1" style="position:absolute;left:15px;top:87px;width:768px;z-index:5;">
+<picture id="wb_Picture1" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:6">
+<img src="images/logo_powerapps.png" id="Picture1" alt="" width="525" height="70">
+</picture>
+<div id="wb_Text5" style="position:absolute;left:15px;top:328px;width:768px;height:24px;z-index:7;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Puedes guardar el archivo en el escritorio.</span></div>
+<div id="wb_ThemeableButton1" style="position:absolute;left:285px;top:222px;width:255px;height:70px;z-index:8;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton1" href="https://contactcenterbpo.ilunion.com/publico/inventario/descargas/Instalador_SnipeIT_R10.exe" target="_blank" title="Agente de inventario de activos" style="width:100%;height:100%;"><span class="ui-button-icon-space"> </span><span class="ui-button-icon ui-icon ui-secondary"></span>&nbsp;&nbsp;DESCARGAR</a></div>
+</div>
+<div id="wizard1-panels-page-3">
+<picture id="wb_Picture2" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:9">
+<img src="images/logo_powerapps.png" id="Picture2" alt="" width="525" height="70">
+</picture>
+<hr id="Line2" style="position:absolute;left:15px;top:87px;width:768px;z-index:10;">
+<div id="wb_Text2" style="position:absolute;left:15px;top:132px;width:768px;height:48px;z-index:11;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Una vez descargado, en tu escritorio aparecera un icono como el de la imagen, debes hacer doble clic sobre él.</span></div>
+<picture id="wb_Picture4" style="position:absolute;left:416px;top:204px;width:282px;height:267px;z-index:12">
+<img src="images/paso2.png" id="Picture4" alt="" width="282" height="267">
+</picture>
+</div>
+<div id="wizard1-panels-page-4">
+<picture id="wb_Picture6" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:13">
+<img src="images/logo_powerapps.png" id="Picture6" alt="" width="525" height="70">
+</picture>
+<hr id="Line4" style="position:absolute;left:15px;top:87px;width:768px;z-index:14;">
+<div id="wb_Text4" style="position:absolute;left:15px;top:131px;width:336px;height:72px;z-index:15;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Aparecerá el asistente de instalación, debes pulsar en el botón &quot;Siguiente &gt;&quot;</span></div>
+<picture id="wb_Picture5" style="position:absolute;left:365px;top:131px;width:397px;height:310px;z-index:16">
+<img src="images/paso3.png" id="Picture5" alt="" width="397" height="309">
+</picture>
+</div>
+<div id="wizard1-panels-page-5">
+<div id="wb_Text6" style="position:absolute;left:11px;top:131px;width:336px;height:48px;z-index:17;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">En la siguiente pantalla debes pulsar el botón &quot;Siguiente &gt;&quot;</span></div>
+<picture id="wb_Picture7" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:18">
+<img src="images/logo_powerapps.png" id="Picture7" alt="" width="525" height="70">
+</picture>
+<picture id="wb_Picture8" style="position:absolute;left:365px;top:131px;width:397px;height:310px;z-index:19">
+<img src="images/paso4.png" id="Picture8" alt="" width="397" height="309">
+</picture>
+<hr id="Line5" style="position:absolute;left:15px;top:87px;width:768px;z-index:20;">
+</div>
+<div id="wizard1-panels-page-6">
+<div id="wb_Text7" style="position:absolute;left:15px;top:132px;width:336px;height:72px;z-index:21;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Aparecerá el asistente de instalación, debes pulsar en el botón &quot;Siguiente &gt;&quot;</span></div>
+<picture id="wb_Picture10" style="position:absolute;left:365px;top:132px;width:397px;height:310px;z-index:22">
+<img src="images/paso3.png" id="Picture10" alt="" width="397" height="309">
+</picture>
+<hr id="Line6" style="position:absolute;left:15px;top:87px;width:768px;z-index:23;">
+<picture id="wb_Picture9" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:24">
+<img src="images/logo_powerapps.png" id="Picture9" alt="" width="525" height="70">
+</picture>
+</div>
+<div id="wizard1-panels-page-7">
+<picture id="wb_Picture12" style="position:absolute;left:365px;top:131px;width:397px;height:310px;z-index:25">
+<img src="images/paso6.png" id="Picture12" alt="" width="397" height="309">
+</picture>
+<picture id="wb_Picture11" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:26">
+<img src="images/logo_powerapps.png" id="Picture11" alt="" width="525" height="70">
+</picture>
+<div id="wb_Text8" style="position:absolute;left:15px;top:131px;width:336px;height:72px;z-index:27;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Ahora debes esperar mientras se realiza la instalación y se rellena la barra de progreso.</span></div>
+<hr id="Line7" style="position:absolute;left:15px;top:87px;width:768px;z-index:28;">
+</div>
+<div id="wizard1-panels-page-8">
+<div id="wb_Text9" style="position:absolute;left:15px;top:131px;width:336px;height:72px;z-index:29;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Aparecerá el asistente de instalación, debes pulsar en el botón &quot;Finalizar&quot;</span></div>
+<picture id="wb_Picture13" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:30">
+<img src="images/logo_powerapps.png" id="Picture13" alt="" width="525" height="70">
+</picture>
+<picture id="wb_Picture14" style="position:absolute;left:365px;top:131px;width:397px;height:310px;z-index:31">
+<img src="images/paso7.png" id="Picture14" alt="" width="397" height="309">
+</picture>
+<hr id="Line8" style="position:absolute;left:15px;top:87px;width:768px;z-index:32;">
+</div>
+<div id="wizard1-panels-page-9">
+<div id="wb_Text10" style="position:absolute;left:15px;top:131px;width:272px;height:191px;z-index:33;">
+<span style="color:#000000;font-family:Arial;font-size:21px;">Una vez finalizada la instalación aparecerá una ventana como esta, es totalmente normal, una vez finalice de registrar el equipo se cerrará sola.<br><br>Y... ¡ya está!</span></div>
+<picture id="wb_Picture15" style="position:absolute;left:15px;top:7px;width:525px;height:70px;z-index:34">
+<img src="images/logo_powerapps.png" id="Picture15" alt="" width="525" height="70">
+</picture>
+<picture id="wb_Picture16" style="position:absolute;left:287px;top:131px;width:475px;height:273px;z-index:35">
+<img src="images/paso8.png" id="Picture16" alt="" width="475" height="248">
+</picture>
+<hr id="Line9" style="position:absolute;left:15px;top:87px;width:768px;z-index:36;">
+</div>
+<div id="wizard1-panels-page-10">
+<picture id="wb_Picture17" style="position:absolute;left:15px;top:6px;width:525px;height:70px;z-index:37">
+<img src="images/logo_powerapps.png" id="Picture17" alt="" width="525" height="70">
+</picture>
+<hr id="Line10" style="position:absolute;left:15px;top:86px;width:768px;z-index:38;">
+<picture id="wb_Picture18" style="position:absolute;left:258px;top:166px;width:275px;height:183px;z-index:39">
+<img src="images/images.png" id="Picture18" alt="" width="275" height="183">
+</picture>
+</div>
+</div></div>
+<div class="modal-footer">
+<button class="btn" id="Wizard1-prev" type="button">Anterior</button>
+<button class="btn" id="Wizard1-next" type="button">Siguiente</button>
+<button class="btn" id="Wizard1-finish" type="button">Fin</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
