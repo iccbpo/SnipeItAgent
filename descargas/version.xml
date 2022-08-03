@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
   <version>1.0.0.7</version>
-  <url>https://rbsoft.org/downloads/AutoUpdaterTest.zip</url>
-  <changelog>https://github.com/ravibpatel/AutoUpdater.NET/releases</changelog>
+  <url>https://github.com/iccbpo/SnipeItAgent/blob/main/descargas/Instalador_SnipeIT_R10.exe</url>
+  <changelog>https://github.com/iccbpo/SnipeItAgent/releases</changelog>
   <mandatory>false</mandatory>
 </item>
